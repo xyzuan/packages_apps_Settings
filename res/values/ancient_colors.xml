@@ -18,6 +18,7 @@
 <resources>
 
     <!-- AncientSettings Color -->
+    <color name="ancient_background">#fff3f3f3</color>
     <color name="homepage_ancient_background">#D1BA13</color>
 
 </resources>
