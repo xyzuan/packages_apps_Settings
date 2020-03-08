@@ -16,12 +16,15 @@
      limitations under the License.
 -->
  
-<RelativeLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SearchBarStyle"
+<RelativeLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:background="?android:colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="48.0dip" style="@style/SearchBarStyle"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.card.MaterialCardView android:id="@+id/search_bar" android:background="#00000000" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_toLeftOf="@+id/account_avatar" style="@style/SearchBarStyle">
-        <Toolbar android:id="@+id/search_action_bar" android:background="@color/ancient_background" android:layout_width="35.0dip" android:layout_height="35.0dip" android:navigationIcon="@drawable/ic_homepage_search" android:contentInsetStartWithNavigation="@dimen/search_bar_content_inset">
+    <TextView android:textAppearance="@style/homepage_spacer_title_style" android:textSize="32.0dip" android:textStyle="bold" android:layout_gravity="center" android:background="?android:colorPrimary" android:paddingLeft="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_label" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+    <com.google.android.material.card.MaterialCardView android:id="@+id/search_bar" android:layout_width="38.0dip" android:layout_height="38.0dip" android:layout_toLeftOf="@+id/avatar_view_holder" android:layout_centerVertical="true" style="@style/SearchBarStyle">
+        <Toolbar android:layout_gravity="center" android:id="@+id/search_action_bar" android:layout_width="32.0dip" android:layout_height="32.0dip" android:navigationIcon="@drawable/ic_homepage_search" android:contentInsetStartWithNavigation="@dimen/search_bar_content_inset">
             <TextView android:id="@+id/search_action_bar_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_menu" style="@style/TextAppearance.SearchBar" />
         </Toolbar>
     </com.google.android.material.card.MaterialCardView>
-    <ImageView android:layout_gravity="end" android:id="@+id/account_avatar" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginRight="15.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/search_bar_account_avatar_content_description" />
+    <com.google.android.material.card.MaterialCardView android:id="@+id/avatar_view_holder" android:layout_width="38.0dip" android:layout_height="38.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="24.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/SearchBarStyle">
+        <ImageView android:layout_gravity="center" android:id="@+id/account_avatar" android:layout_width="32.0dip" android:layout_height="32.0dip" android:contentDescription="@string/search_bar_account_avatar_content_description" />
+    </com.google.android.material.card.MaterialCardView>
 </RelativeLayout>
